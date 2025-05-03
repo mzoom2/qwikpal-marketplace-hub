@@ -44,7 +44,7 @@ const mockProductData = {
       avatar: 'https://images.unsplash.com/photo-1501854140801-50d01698950b',
       rating: 4,
       date: '2023-04-22',
-      comment: 'Good account with good engagement. The only reason I'm giving 4 stars is because the audience was slightly different than what I expected, but still valuable.'
+      comment: "Good account with good engagement. The only reason I'm giving 4 stars is because the audience was slightly different than what I expected, but still valuable."
     },
     {
       id: '3',
