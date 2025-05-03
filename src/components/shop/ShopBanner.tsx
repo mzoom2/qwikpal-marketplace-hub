@@ -12,6 +12,9 @@ interface ShopBannerProps {
   rating: number;
   reviewCount: number;
   description: string;
+  freelancerId?: string;
+  freelancerName?: string;
+  freelancerSkill?: string;
 }
 
 const ShopBanner: React.FC<ShopBannerProps> = ({
@@ -20,7 +23,10 @@ const ShopBanner: React.FC<ShopBannerProps> = ({
   logo,
   rating,
   reviewCount,
-  description
+  description,
+  freelancerId,
+  freelancerName,
+  freelancerSkill
 }) => {
   return (
     <div className="bg-white rounded-lg shadow-md overflow-hidden">
@@ -46,6 +52,26 @@ const ShopBanner: React.FC<ShopBannerProps> = ({
         </div>
         
         <p className="text-gray-600 text-center mb-6 max-w-2xl">{description}</p>
+        
+        {freelancerId && freelancerName && freelancerSkill && (
+          <div className="w-full bg-gray-50 p-4 rounded-lg mb-6 flex items-center">
+            <Avatar className="h-12 w-12 mr-4">
+              <AvatarImage src={logo} alt={freelancerName} />
+              <AvatarFallback>{freelancerName.charAt(0)}</AvatarFallback>
+            </Avatar>
+            <div className="flex-1">
+              <div className="flex items-center">
+                <p className="font-medium">{freelancerName}</p>
+                <span className="bg-qwikpal-blue/20 text-qwikpal-blue text-xs px-2 py-0.5 rounded ml-2">
+                  {freelancerSkill}
+                </span>
+              </div>
+              <Link to={`/freelancers/${freelancerId}`} className="text-sm text-qwikpal-teal hover:underline">
+                View freelancer profile →
+              </Link>
+            </div>
+          </div>
+        )}
         
         <div className="flex space-x-4">
           <Link to={`/shops/${id}/products`}>
