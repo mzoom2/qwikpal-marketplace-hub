@@ -30,14 +30,20 @@ const Footer = () => {
             </div>
           </div>
           
-          {/* Quick Links */}
+          {/* Main Pages */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+            <h3 className="text-lg font-semibold mb-4">Main Pages</h3>
             <ul className="space-y-2 text-sm">
-              <li><Link to="/about" className="text-gray-300 hover:text-white">About Us</Link></li>
-              <li><Link to="/contact" className="text-gray-300 hover:text-white">Contact Us</Link></li>
-              <li><Link to="/pricing" className="text-gray-300 hover:text-white">Pricing</Link></li>
-              <li><Link to="/faq" className="text-gray-300 hover:text-white">FAQ</Link></li>
+              <li><Link to="/" className="text-gray-300 hover:text-white">Home</Link></li>
+              <li><Link to="/product/create" className="text-gray-300 hover:text-white">List a Product</Link></li>
+              <li><Link to="/shops/1" className="text-gray-300 hover:text-white">Shop Profile</Link></li>
+              <li><Link to="/shops/1/products" className="text-gray-300 hover:text-white">Shop Products</Link></li>
+              <li><Link to="/freelancers/101" className="text-gray-300 hover:text-white">Freelancer Profile</Link></li>
+              <li><Link to="/products/201" className="text-gray-300 hover:text-white">Product Details</Link></li>
+              <li><Link to="/cart" className="text-gray-300 hover:text-white">Cart</Link></li>
+              <li><Link to="/checkout" className="text-gray-300 hover:text-white">Checkout</Link></li>
+              <li><Link to="/my-orders" className="text-gray-300 hover:text-white">My Orders</Link></li>
+              <li><Link to="/admin" className="text-gray-300 hover:text-white">Admin Dashboard</Link></li>
             </ul>
           </div>
           
